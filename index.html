@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Reo Anthony Tan is a BS Information Technology student specializing in web development, UI/UX design, graphic design, and video editing." />
+    <title>Reo Anthony Tan | Web Developer & UI/UX Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+      <div class="page-loader-inner">
+        <div class="loader-ring" aria-hidden="true"></div>
+        <p>Returning to home&hellip;</p>
+      </div>
+    </div>
+
+    <!-- Background Layers -->
+    <div class="particle-layer" aria-hidden="true"></div>
+    <div class="cursor-trail" aria-hidden="true"></div>
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <div class="page-shell">
+
+      <!-- ===== HERO / HEADER ===== -->
+      <header class="hero-panel" id="home">
+        <div class="hero-glow"></div>
+        <div class="hero-accent accent-one" aria-hidden="true"></div>
+        <div class="hero-accent accent-two" aria-hidden="true"></div>
+        <div class="hero-mesh" aria-hidden="true"></div>
+
+        <!-- Navigation -->
+        <nav class="topbar" aria-label="Primary navigation">
+          <a class="brand" href="#home">
+            <span class="brand-dot"></span>
+            Reo Anthony Tan
+          </a>
+          <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#work">Experience</a>
+            <a href="#services">Skills</a>
+            <a href="#contact">Contact</a>
+            <a href="assets/Reo-Anthony-Tan-CV.pdf" class="nav-resume" download>Resume</a>
+          </div>
+          <div class="topbar-actions">
+            <button id="reloadButton" class="reload-button" type="button" aria-label="Reload page">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+              Reload
+            </button>
+            <a class="cta-button" href="#contact">Let's Talk</a>
+          </div>
+        </nav>
+
+        <!-- Mobile Nav -->
+        <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+          <div class="mobile-nav-inner">
+            <div class="mobile-nav-header">
+              <span class="mobile-brand">Reo Anthony Tan</span>
+              <button id="mobileNavClose" class="close-menu" aria-label="Close menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </button>
+            </div>
+            <nav class="mobile-links" aria-label="Mobile navigation">
+              <a href="#about">About</a>
+              <a href="#work">Experience</a>
+              <a href="#services">Skills</a>
+              <a href="#contact">Contact</a>
+            </nav>
+            <div class="mobile-actions">
+              <a class="mobile-cta primary" href="#contact">Contact Me</a>
+              <a class="mobile-cta secondary" href="assets/Reo-Anthony-Tan-CV.pdf" download>Download CV</a>
+              <button id="mobileReloadButton" class="reload-button mobile-reload-button" type="button" aria-label="Reload page">Reload</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Copy -->
+        <div class="hero-copy reveal">
+          <div class="eyebrow-wrap">
+            <span class="eyebrow-line"></span>
+            <p class="eyebrow">Web Dev &amp; UI/UX Designer &nbsp;&middot;&nbsp; Graphic &amp; Video Editor</p>
+          </div>
+          <h1>I'm <em>Reo Tan.</em><br>I craft polished digital experiences.</h1>
+          <p class="subtitle">
+            BS Information Technology student with hands-on experience in full-stack web development,
+            UI/UX design, graphic design, and short-form video editing.
+          </p>
+          <div class="hero-highlights">
+            <span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              PHP &middot; MySQL &middot; JavaScript
+            </span>
+            <span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              Figma &middot; Photoshop &middot; Premiere
+            </span>
+            <span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Brand Visuals &middot; Content Creation
+            </span>
+          </div>
+          <div class="hero-actions">
+            <a class="primary-action" href="#work">View Experience</a>
+            <a class="secondary-action" href="#services">See Skills</a>
+          </div>
+        </div>
+
+        <!-- Hero Visual -->
+        <div class="hero-visual reveal" id="heroVisual">
+          <div class="hero-scene">
+            <img src="assets/profile-photo.png" alt="Portrait of Reo Anthony Tan" class="profile-photo" />
+            <div class="hero-orbit orbit-1"></div>
+            <div class="hero-orbit orbit-2"></div>
+            <div class="hero-glow-ring"></div>
+            <div class="scene-badge scene-badge-1">
+              <div class="badge-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div class="badge-text">
+                <strong>3+ Roles</strong>
+                <span>Web &amp; Media</span>
+              </div>
+            </div>
+            <div class="scene-badge scene-badge-2">
+              <div class="badge-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="badge-text">
+                <strong>100%</strong>
+                <span>Craft &amp; Polish</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual-copy">
+            <div class="visual-copy-tag">Creative Problem-Solver</div>
+            <h3>Code meets visual storytelling</h3>
+            <p>I blend development precision with design sensibility to deliver polished websites and content that genuinely connect with audiences.</p>
+            <a class="secondary-action cv-button" href="assets/Reo-Anthony-Tan-CV.pdf" download>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download CV
+            </a>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero-stats reveal fade-left">
+          <article class="stat-card">
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Professional roles across web and media</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-number">4+</div>
+            <div class="stat-label">Tools &amp; platforms used daily</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Attention to craft, clarity, and polish</div>
+          </article>
+        </div>
+      </header>
+
+      <!-- ===== MAIN CONTENT ===== -->
+      <main>
+
+        <!-- About Section -->
+        <section class="section-intro" id="about">
+          <div class="section-header reveal fade-up">
+            <p class="section-label">About Me</p>
+            <h2>From responsive websites to brand visuals, I create work that is both functional and memorable.</h2>
+          </div>
+          <div class="about-grid reveal fade-left">
+            <div class="about-text">
+              <p>
+                Graduating BS Information Technology student with experience in full-stack web development,
+                UI/UX design, graphic design, and short-form video editing. Skilled in building responsive
+                web applications, creating engaging digital content, and delivering user-focused solutions.
+              </p>
+              <p>
+                Passionate about learning new technologies and contributing to innovative teams. I bring a
+                growth mindset to every project — whether it's a booking system, a brand identity, or a viral short-form video.
+              </p>
+            </div>
+            <div>
+              <ul class="about-highlights reveal zoom-in">
+                <li>
+                  <div class="highlight-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  </div>
+                  <div>
+                    <strong>Full-stack development</strong>
+                    <span>PHP, MySQL, HTML, CSS, and JavaScript</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="highlight-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                  </div>
+                  <div>
+                    <strong>UI/UX design</strong>
+                    <span>Intuitive layouts and user-centered interfaces in Figma</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="highlight-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+                  </div>
+                  <div>
+                    <strong>Digital content</strong>
+                    <span>Compelling graphics and short-form videos for social media</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="highlight-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="22 12 16 12 13 21 11 3 8 12 2 12"/></svg>
+                  </div>
+                  <div>
+                    <strong>Growth mindset</strong>
+                    <span>Eager to keep learning and adapt to new tools</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="portfolio-section" id="work">
+          <div class="section-header reveal">
+            <p class="section-label">Work Experience</p>
+            <h2>Selected roles that combine development, design, and content creation.</h2>
+          </div>
+          <div class="project-filters reveal fade-up" role="group" aria-label="Project filters">
+            <button class="filter-button active" data-filter="all">All Work</button>
+            <button class="filter-button" data-filter="web">Web Dev</button>
+            <button class="filter-button" data-filter="video">Video</button>
+            <button class="filter-button" data-filter="graphic">Graphic</button>
+          </div>
+          <div class="portfolio-grid reveal staggered">
+            <article tabindex="0" role="button" class="card project-card reveal fade-up" data-category="web"
+              data-project-title="Carlito's Swimming Pool Resort"
+              data-project-subtitle="Student Web Developer &bull; Aug 2025 &ndash; Oct 2025"
+              data-project-details="Developed a full-stack online booking system using PHP, MySQL, HTML, CSS, and JavaScript, including booking management, payment integration, and email notifications to improve reservation efficiency."
+              data-project-tech="PHP &middot; MySQL &middot; HTML &middot; CSS &middot; JavaScript">
+              <div class="card-inner">
+                <div class="card-top">
+                  <div class="card-tag">Web Development</div>
+                  <div class="card-arrow">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                  </div>
+                </div>
+                <h3>Carlito's Swimming Pool Resort</h3>
+                <p>Built a full-stack booking system that automated reservations, integrated payments, and improved overall booking efficiency.</p>
+                <div class="card-footer">
+                  <span class="card-footnote">Student Web Developer</span>
+                  <span class="card-period">Aug &ndash; Oct 2025</span>
+                </div>
+              </div>
+            </article>
+
+            <article tabindex="0" role="button" class="card project-card reveal" data-category="video"
+              data-project-title="Freelance Video Editor"
+              data-project-subtitle="Jan 2024 &ndash; Aug 2024"
+              data-project-details="Edited short-form videos for TikTok, Instagram Reels, and YouTube Shorts, adding captions, transitions, sound effects, and motion graphics to create engaging social content."
+              data-project-tech="CapCut &middot; Adobe Premiere Pro">
+              <div class="card-inner">
+                <div class="card-top">
+                  <div class="card-tag">Video Editing</div>
+                  <div class="card-arrow">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                  </div>
+                </div>
+                <h3>Freelance Video Editor</h3>
+                <p>Created engaging short-form content for social media platforms using CapCut and Premiere Pro, driving audience growth.</p>
+                <div class="card-footer">
+                  <span class="card-footnote">Remote &middot; Freelance</span>
+                  <span class="card-period">Jan &ndash; Aug 2024</span>
+                </div>
+              </div>
+            </article>
+
+            <article tabindex="0" role="button" class="card project-card reveal" data-category="graphic"
+              data-project-title="Chamba Billiards"
+              data-project-subtitle="Graphic Web Designer &bull; July 2024 &ndash; Aug 2024"
+              data-project-details="Designed responsive website mockups and UI layouts while creating branding assets that improved the user experience and supported stakeholder collaboration."
+              data-project-tech="UI Layouts &middot; Branding &middot; UX">
+              <div class="card-inner">
+                <div class="card-top">
+                  <div class="card-tag">Graphic &amp; UI Design</div>
+                  <div class="card-arrow">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                  </div>
+                </div>
+                <h3>Chamba Billiards</h3>
+                <p>Designed website mockups and branding assets with a focus on responsive, user-friendly experiences and brand consistency.</p>
+                <div class="card-footer">
+                  <span class="card-footnote">Graphic Web Designer</span>
+                  <span class="card-period">Jul &ndash; Aug 2024</span>
+                </div>
+              </div>
+            </article>
+
+            <article tabindex="0" role="button" class="card project-card reveal" data-category="graphic"
+              data-project-title="Sinners Clothing Brand"
+              data-project-subtitle="Graphic Designer | Brand Designer &bull; Nov 2025 &ndash; Jan 2026"
+              data-project-details="Created marketing materials, social media graphics, and promotional content while maintaining a consistent brand identity across digital platforms to strengthen engagement."
+              data-project-tech="Brand Identity &middot; Social Media &middot; Marketing">
+              <div class="card-inner">
+                <div class="card-top">
+                  <div class="card-tag">Brand Design</div>
+                  <div class="card-arrow">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                  </div>
+                </div>
+                <h3>Sinners Clothing Brand</h3>
+                <p>Developed promotional visuals and strengthened brand identity through consistent, platform-native digital design.</p>
+                <div class="card-footer">
+                  <span class="card-footnote">Graphic &amp; Brand Designer</span>
+                  <span class="card-period">Nov 2025 &ndash; Jan 2026</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="services-section" id="services">
+          <div class="section-header reveal fade-up">
+            <p class="section-label">Skills</p>
+            <h2>Core strengths across development, design, and content creation.</h2>
+          </div>
+          <div class="services-grid reveal staggered">
+            <article class="card service-card reveal fade-up">
+              <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3>Development &amp; Frontend</h3>
+              <ul class="skill-list">
+                <li>HTML &amp; CSS</li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>Bootstrap</li>
+              </ul>
+            </article>
+            <article class="card service-card reveal fade-up">
+              <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="13.5" cy="6.5" r="0.5"/><circle cx="17.5" cy="10.5" r="0.5"/><circle cx="8.5" cy="7.5" r="0.5"/><circle cx="6.5" cy="12.5" r="0.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+              </div>
+              <h3>Design &amp; Editing</h3>
+              <ul class="skill-list">
+                <li>UI/UX Design (Figma)</li>
+                <li>Adobe Photoshop</li>
+                <li>Adobe Premiere Pro</li>
+                <li>CapCut</li>
+              </ul>
+            </article>
+            <article class="card service-card reveal fade-up">
+              <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </div>
+              <h3>Tools &amp; Soft Skills</h3>
+              <ul class="skill-list">
+                <li>Git &amp; GitHub</li>
+                <li>Microsoft Office</li>
+                <li>Customer Service &amp; CRM</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- Education + Interests Section -->
+        <section class="timeline-section reveal fade-up">
+          <div class="section-split">
+            <div class="split-copy">
+              <p class="section-label">Education</p>
+              <h2>Bachelor of Science in Information Technology</h2>
+              <div class="edu-meta">
+                <div class="edu-school">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  St. Mary's College of Meycauayan
+                </div>
+                <div class="edu-year">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  Expected Graduation: 2026
+                </div>
+              </div>
+              <p class="split-intro">Beyond the screen, I recharge and find inspiration through:</p>
+            </div>
+            <div class="timeline">
+              <div class="timeline-item reveal fade-up">
+                <div class="timeline-num">01</div>
+                <div class="timeline-content">
+                  <h4>Running</h4>
+                  <p>Staying active and focused through regular runs.</p>
+                </div>
+              </div>
+              <div class="timeline-item reveal fade-up">
+                <div class="timeline-num">02</div>
+                <div class="timeline-content">
+                  <h4>Photography</h4>
+                  <p>Capturing stories and details through visual perspective.</p>
+                </div>
+              </div>
+              <div class="timeline-item reveal fade-up">
+                <div class="timeline-num">03</div>
+                <div class="timeline-content">
+                  <h4>Traveling</h4>
+                  <p>Exploring new places and finding inspiration in different cultures.</p>
+                </div>
+              </div>
+              <div class="timeline-item reveal fade-up">
+                <div class="timeline-num">04</div>
+                <div class="timeline-content">
+                  <h4>Cooking</h4>
+                  <p>Enjoying hands-on creativity and experimenting with new flavors.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section reveal" id="contact">
+          <div class="contact-glow" aria-hidden="true"></div>
+          <div class="section-header">
+            <p class="section-label">Contact</p>
+            <h2>Let's connect and create something impactful.</h2>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-copy">
+              <p>
+                I'm open to web development, UI/UX, graphic design, and video editing opportunities. Whether you need a polished website, brand visuals, or social media content, I'd love to collaborate.
+              </p>
+              <ul class="contact-details">
+                <li>
+                  <div class="contact-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.16z"/></svg>
+                  </div>
+                  <div>
+                    <strong>Phone</strong>
+                    <span>+63 939-439-5643</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="contact-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                  </div>
+                  <div>
+                    <strong>Facebook</strong>
+                    <span>Reo Tan</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="contact-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </div>
+                  <div>
+                    <strong>Email</strong>
+                    <span>reotan040@gmail.com</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <form id="contactForm" class="contact-form" action="mailto:reotan040@gmail.com" method="post" enctype="text/plain">
+              <div class="form-row">
+                <label>
+                  <span class="label-text">Name</span>
+                  <input type="text" name="name" placeholder="Your full name" required />
+                </label>
+                <label>
+                  <span class="label-text">Email</span>
+                  <input type="email" name="email" placeholder="you@example.com" required />
+                </label>
+              </div>
+              <label>
+                <span class="label-text">Project Brief</span>
+                <input type="text" name="subject" placeholder="What are you looking to build?" required />
+              </label>
+              <label>
+                <span class="label-text">Message</span>
+                <textarea name="message" rows="5" placeholder="Tell me about your vision, timeline, and goals..." required></textarea>
+              </label>
+              <button type="submit" class="primary-action submit-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Send Message
+              </button>
+              <p class="form-note" id="formNote" aria-live="polite"></p>
+            </form>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer reveal">
+        <div class="footer-inner">
+          <div class="footer-copy">
+            <div class="footer-brand">Reo Anthony Tan</div>
+            <p>Ready to collaborate?</p>
+            <h2>Let's build something <em>remarkable</em> together.</h2>
+          </div>
+          <div class="footer-meta">
+            <div class="footer-links">
+              <a href="mailto:reotan040@gmail.com">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                reotan040@gmail.com
+              </a>
+              <a href="#home" class="back-to-top">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+                Back to top
+              </a>
+            </div>
+            <p class="footer-credit">Designed &amp; developed by Reo Anthony Tan &copy; 2026</p>
+          </div>
+        </div>
+      </footer>
+
+    </div><!-- end .page-shell -->
+
+    <!-- Project Modal -->
+    <div class="modal-overlay" id="projectModal" aria-hidden="true">
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+        <button class="modal-close" id="modalClose" aria-label="Close project details">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="modal-content">
+          <span class="modal-badge" id="projectModalCategory"></span>
+          <h3 id="projectModalTitle"></h3>
+          <p class="modal-subtitle" id="projectModalSubtitle"></p>
+          <div class="modal-divider"></div>
+          <p class="modal-description" id="projectModalDescription"></p>
+          <div class="modal-tech-wrap">
+            <span class="modal-tech-label">Technologies</span>
+            <div class="modal-meta" id="projectModalTech"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ---- Element references ----
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileNav = document.getElementById('mobileNav');
+      const mobileNavClose = document.getElementById('mobileNavClose');
+      const reloadButton = document.getElementById('reloadButton');
+      const mobileReloadButton = document.getElementById('mobileReloadButton');
+      const pageLoader = document.getElementById('pageLoader');
+      const filterButtons = document.querySelectorAll('.filter-button');
+      const projectCards = document.querySelectorAll('.project-card');
+      const heroVisual = document.getElementById('heroVisual');
+      const particleLayer = document.querySelector('.particle-layer');
+      const cursorTrail = document.querySelector('.cursor-trail');
+      const projectModal = document.getElementById('projectModal');
+      const modalClose = document.getElementById('modalClose');
+      const modalTitle = document.getElementById('projectModalTitle');
+      const modalSubtitle = document.getElementById('projectModalSubtitle');
+      const modalDescription = document.getElementById('projectModalDescription');
+      const modalCategory = document.getElementById('projectModalCategory');
+      const modalTech = document.getElementById('projectModalTech');
+      const contactForm = document.getElementById('contactForm');
+      const formNote = document.getElementById('formNote');
+
+      // ---- Reload Loader ----
+      function animateHomeBounce() {
+        const heroPanel = document.querySelector('.hero-panel');
+        if (!heroPanel) return;
+        heroPanel.classList.add('bounce');
+        setTimeout(() => heroPanel.classList.remove('bounce'), 600);
+      }
+
+      function showReloadLoader() {
+        if (!pageLoader) return;
+        pageLoader.classList.add('active');
+        document.body.classList.add('page-loading');
+        if (window.location.hash !== '#home') history.replaceState(null, '', '#home');
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+        setTimeout(() => {
+          pageLoader.classList.remove('active');
+          document.body.classList.remove('page-loading');
+          animateHomeBounce();
+        }, 850);
+      }
+
+      if (reloadButton) reloadButton.addEventListener('click', showReloadLoader);
+      if (mobileReloadButton) mobileReloadButton.addEventListener('click', showReloadLoader);
+
+      window.addEventListener('beforeunload', () => sessionStorage.setItem('portfolio-reload', '1'));
+      window.addEventListener('pageshow', () => {
+        if (sessionStorage.getItem('portfolio-reload') === '1') {
+          sessionStorage.removeItem('portfolio-reload');
+          showReloadLoader();
+        }
+      });
+
+      // ---- Filters ----
+      function filterProjects(category) {
+        const grid = document.querySelector('.portfolio-grid');
+        if (!grid) return;
+        grid.classList.add('filtering');
+        setTimeout(() => {
+          filterButtons.forEach(b => b.classList.toggle('active', b.dataset.filter === category));
+          projectCards.forEach(card => {
+            const match = category === 'all' || card.dataset.category === category;
+            card.classList.toggle('hidden', !match);
+          });
+          grid.classList.remove('filtering');
+        }, 180);
+      }
+      filterButtons.forEach(b => b.addEventListener('click', () => filterProjects(b.dataset.filter)));
+
+      // ---- 3D Tilt ----
+      function setTilt(el, x, y, intensity = 18) {
+        const rect = el.getBoundingClientRect();
+        const relX = (x - rect.left) / rect.width - 0.5;
+        const relY = (y - rect.top) / rect.height - 0.5;
+        el.style.transform = `rotateX(${relY * -intensity}deg) rotateY(${relX * intensity}deg)`;
+      }
+
+      document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+          setTilt(card, e.clientX, e.clientY, 14);
+          card.style.boxShadow = '0 48px 100px rgba(0,0,0,0.32)';
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = '';
+          card.style.boxShadow = '';
+        });
+      });
+
+      if (heroVisual) {
+        heroVisual.addEventListener('mousemove', e => setTilt(heroVisual, e.clientX, e.clientY, 10));
+        heroVisual.addEventListener('mouseleave', () => { heroVisual.style.transform = ''; });
+      }
+
+      // ---- Mobile Nav ----
+      menuToggle.addEventListener('click', () => {
+        const isOpen = mobileNav.classList.toggle('open');
+        menuToggle.classList.toggle('open', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        mobileNav.setAttribute('aria-hidden', String(!isOpen));
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+
+      function closeMobileNav() {
+        mobileNav.classList.remove('open');
+        menuToggle.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        mobileNav.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      mobileNavClose.addEventListener('click', closeMobileNav);
+      document.querySelectorAll('.mobile-links a, .mobile-actions a').forEach(l => l.addEventListener('click', closeMobileNav));
+
+      // ---- Modal ----
+      function openProjectModal(card) {
+        const tag = card.querySelector('.card-tag');
+        modalCategory.textContent = tag ? tag.textContent : '';
+        modalTitle.textContent = card.dataset.projectTitle || '';
+        modalSubtitle.innerHTML = card.dataset.projectSubtitle || '';
+        modalDescription.textContent = card.dataset.projectDetails || '';
+        modalTech.innerHTML = card.dataset.projectTech || '';
+        projectModal.classList.add('open');
+        projectModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeProjectModal() {
+        projectModal.classList.remove('open');
+        projectModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('click', () => openProjectModal(card));
+        card.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openProjectModal(card); }
+        });
+      });
+
+      modalClose.addEventListener('click', closeProjectModal);
+      projectModal.addEventListener('click', e => { if (e.target === projectModal) closeProjectModal(); });
+
+      // ---- Particles ----
+      const cursor = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+
+      document.addEventListener('mousemove', e => {
+        cursor.x = e.clientX;
+        cursor.y = e.clientY;
+        const rx = (e.clientX / window.innerWidth - 0.5) * 16;
+        const ry = (e.clientY / window.innerHeight - 0.5) * 16;
+        document.documentElement.style.setProperty('--cursor-x', `${rx}px`);
+        document.documentElement.style.setProperty('--cursor-y', `${ry}px`);
+      });
+
+      function createParticles(count = 36) {
+        particleLayer.innerHTML = '';
+        const arr = [];
+        for (let i = 0; i < count; i++) {
+          const dot = document.createElement('span');
+          const size = Math.random() * 4 + 1.5;
+          dot.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;opacity:${Math.random()*0.3+0.1};filter:blur(${Math.random()*1.5}px)`;
+          dot.dataset.vx = (Math.random() - 0.5) * 0.1;
+          dot.dataset.vy = (Math.random() - 0.5) * 0.1;
+          particleLayer.appendChild(dot);
+          arr.push(dot);
+        }
+        return arr;
+      }
+
+      const particles = createParticles(36);
+      (function animateParticles() {
+        particles.forEach(dot => {
+          let x = parseFloat(dot.style.left);
+          let y = parseFloat(dot.style.top);
+          x += parseFloat(dot.dataset.vx);
+          y += parseFloat(dot.dataset.vy);
+          if (x < -4) x = 104; if (x > 104) x = -4;
+          if (y < -4) y = 104; if (y > 104) y = -4;
+          dot.style.left = x + '%';
+          dot.style.top = y + '%';
+        });
+        requestAnimationFrame(animateParticles);
+      })();
+
+      // ---- Cursor Trail ----
+      function createCursorTrail(count = 8) {
+        cursorTrail.innerHTML = '';
+        const nodes = [];
+        for (let i = 0; i < count; i++) {
+          const n = document.createElement('span');
+          const s = 5 + i * 2.5;
+          n.style.cssText = `width:${s}px;height:${s}px;opacity:${0.9 - i * 0.1}`;
+          cursorTrail.appendChild(n);
+          nodes.push(n);
+        }
+        return nodes;
+      }
+
+      const trail = createCursorTrail();
+      const trailPos = trail.map(() => ({ x: cursor.x, y: cursor.y }));
+      (function animateTrail() {
+        trail.forEach((n, i) => {
+          const target = i === 0 ? cursor : trailPos[i - 1];
+          trailPos[i].x += (target.x - trailPos[i].x) * 0.22;
+          trailPos[i].y += (target.y - trailPos[i].y) * 0.22;
+          n.style.transform = `translate3d(${trailPos[i].x - parseFloat(n.style.width) / 2}px, ${trailPos[i].y - parseFloat(n.style.height) / 2}px, 0)`;
+        });
+        requestAnimationFrame(animateTrail);
+      })();
+
+      // ---- Page reveal ----
+      function revealPage() { document.body.classList.add('page-loaded'); }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', revealPage);
+      else revealPage();
+
+      // ---- Contact Form ----
+      contactForm.addEventListener('submit', e => {
+        e.preventDefault();
+        const fd = new FormData(contactForm);
+        const subject = encodeURIComponent(fd.get('subject'));
+        const body = encodeURIComponent(`${fd.get('message')}\n\nFrom: ${fd.get('name')} <${fd.get('email')}>`);
+        window.location.href = `mailto:reotan040@gmail.com?subject=${subject}&body=${body}`;
+        formNote.textContent = 'Your email client is opening. If it does not open, please email reotan040@gmail.com directly.';
+      });
+
+      // ---- Keyboard escape ----
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+          if (projectModal.classList.contains('open')) closeProjectModal();
+          else if (mobileNav.classList.contains('open')) closeMobileNav();
+        }
+      });
+
+      // ---- Scroll reveal ----
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+      // ---- Parallax ----
+      const parallaxTargets = {
+        glow: document.querySelector('.hero-glow'),
+        a1: document.querySelector('.accent-one'),
+        a2: document.querySelector('.accent-two'),
+      };
+
+      let latestScroll = window.scrollY;
+      (function tickParallax() {
+        if (parallaxTargets.glow) parallaxTargets.glow.style.transform = `translate3d(0,${latestScroll * 0.04}px,0)`;
+        if (parallaxTargets.a1) parallaxTargets.a1.style.transform = `translate3d(0,${latestScroll * 0.06}px,0)`;
+        if (parallaxTargets.a2) parallaxTargets.a2.style.transform = `translate3d(0,${latestScroll * 0.08}px,0)`;
+        requestAnimationFrame(tickParallax);
+      })();
+      window.addEventListener('scroll', () => { latestScroll = window.scrollY; }, { passive: true });
+
+      // ---- Active nav ----
+      const navLinks = document.querySelectorAll('.topbar .nav-links a[href^="#"]');
+      const sections = Array.from(navLinks).map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+
+      function updateActiveNav() {
+        const scrollY = window.scrollY + 150;
+        let current = sections[0];
+        sections.forEach(s => { if (s.offsetTop <= scrollY) current = s; });
+        navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${current.id}`));
+      }
+
+      navLinks.forEach(l => l.addEventListener('click', () => {
+        navLinks.forEach(n => n.classList.remove('active'));
+        l.classList.add('active');
+      }));
+
+      window.addEventListener('scroll', () => {
+        requestAnimationFrame(() => {
+          updateActiveNav();
+          document.querySelector('.topbar')?.classList.toggle('scrolled', window.scrollY > 32);
+        });
+      }, { passive: true });
+
+      updateActiveNav();
+      document.querySelector('.topbar')?.classList.toggle('scrolled', window.scrollY > 32);
+    </script>
+  </body>
+</html>
