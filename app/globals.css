@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import "../style.css";
+@import "../chat.css";
+@import "../stack.css";
+@import "../fixes.css";
+
+:root {
+  --sans: var(--font-manrope), sans-serif;
+  --display: var(--font-syne), sans-serif;
+  --mono: var(--font-dm-mono), monospace;
+}
+
+@layer base {
+  section[id] {
+    scroll-margin-top: 70px;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--acid);
+    outline-offset: 4px;
+  }
+
+  .contact :focus-visible {
+    outline-color: #080808;
+    box-shadow: 0 0 0 3px var(--acid), 0 0 0 6px #080808;
+  }
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 10000;
+  padding: 10px 14px;
+  background: var(--acid);
+  color: #080808;
+  font: 700 12px var(--mono);
+  letter-spacing: 0.06em;
+  transform: translateY(-160%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus-visible {
+  transform: none;
+  outline-color: #080808;
+  outline-offset: 2px;
+}

@@ -4,3 +4,7 @@
 node_modules/
 *.log
 .vercel/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo

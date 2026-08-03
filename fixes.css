@@ -1,5 +1,5 @@
 @media (min-width: 761px) {
-  .hero h1 { font-size: clamp(62px, 7.35vw, 126px); line-height: .79; }
+  .hero h1 { font-size: clamp(62px, 6.9vw, 120px); line-height: .79; }
 }
 
 .portrait-frame {
@@ -52,4 +52,79 @@ body .chat-send { position: absolute; right: 0; bottom: 0; }
   .hero h1 .line.reveal > span { transform: none; }
   .hero h1 { font-size: 12.5vw; line-height: .88; }
   .hero h1 .indent { font-size: 11.1vw; }
+}
+
+/* Accessibility and finishing pass */
+.signal-sequence {
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+
+.project-meta { font-size: 10px; letter-spacing: .1em; color: #9a9a93; }
+.project-footer li { font-size: 9px; color: #aaa9a2; border-color: #494945; }
+.project-card:hover .project-arrow {
+  background: var(--acid);
+  border-color: var(--acid);
+  color: #080808;
+  transform: rotate(45deg);
+}
+.expertise-no { font-size: 10px; color: #999992; }
+.expertise-list p { font-size: 10px; color: #9c9c95; }
+
+.stack-console-bar { min-height: 46px; height: auto; padding-block: 10px; font-size: 10px; color: #999992; }
+.tech-index { font-size: 9px; color: #898982; }
+.tech-card p { font-size: 10px; line-height: 1.45; color: #a0a099; }
+.tech-card small { font-size: 8px; color: #898982; }
+.readout-head { font-size: 9px; color: #999992; }
+.stack-groups span,
+.stack-groups b { font-size: 9px; color: #8e8e87; }
+.stack-groups p { font-size: 9px; color: #aaa9a2; }
+.stack-groups b { color: var(--acid); }
+.stack-note { font-size: 9px; color: #91918a; }
+.stack-command { min-height: 43px; height: auto; padding-block: 10px; font-size: 10px; color: #999992; }
+
+.chat-launcher-copy small,
+.chat-identity p,
+.chat-context,
+.message-label,
+.chat-footer { font-size: 9px; color: #aaa9a2; letter-spacing: .07em; }
+.chat-context { min-height: 32px; height: auto; padding-block: 7px; }
+.message-label { color: #999992; }
+.chat-footer { min-height: 26px; height: auto; padding-block: 2px; color: #8e8e87; }
+
+@media (max-width: 760px) {
+  .site-header nav {
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform .5s var(--ease), visibility 0s linear .5s;
+  }
+  .site-header nav.open {
+    visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .availability span,
+  .hero-rail i::after,
+  .contact-status i,
+  .stack-console-bar b span,
+  .stack-command i { animation: none; }
+  .circle-button,
+  .portrait-frame img,
+  .bento-card,
+  .project-arrow,
+  .expertise-list article,
+  .contact-link b,
+  .tech-card,
+  .chat-send { transition: none; }
+  .circle-button:hover,
+  .bento-card:hover,
+  .project-card:hover .project-arrow,
+  .contact-link:hover b,
+  .tech-card:hover,
+  .chat-launcher:hover,
+  .chat-send:hover { transform: none; }
 }
