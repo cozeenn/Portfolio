@@ -67,6 +67,10 @@
     });
   }, { threshold: .12, rootMargin: '0px 0px -5% 0px' });
   document.querySelectorAll('.reveal:not(.hero .reveal)').forEach(el => observer.observe(el));
+  const initialTarget = window.location.hash ? document.querySelector(window.location.hash) : null;
+  if (initialTarget) {
+    initialTarget.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+  }
 
   // Scroll state, progress, and navigation
   const header = document.querySelector('.site-header');
@@ -193,6 +197,18 @@
     window.addEventListener('resize', resize);
     resize(); draw();
   }
+
+  // Interactive tech-stack illumination
+  document.querySelectorAll('.tech-card').forEach(card => {
+    card.style.setProperty('--tech-accent', card.dataset.accent || '#c7ff2e');
+    if (finePointer && !reducedMotion) {
+      card.addEventListener('mousemove', event => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--mx', `${event.clientX - rect.left}px`);
+        card.style.setProperty('--my', `${event.clientY - rect.top}px`);
+      });
+    }
+  });
 
   // Groq-powered portfolio assistant
   const chatLauncher = document.getElementById('chatLauncher');

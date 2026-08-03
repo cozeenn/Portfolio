@@ -10,7 +10,7 @@ VERIFIED PORTFOLIO FACTS
 - Reo Anthony Tan is a graduating BS Information Technology student and multidisciplinary creative based in the Philippines.
 - He is open to project and career opportunities, including remote opportunities.
 - His focus areas are responsive web development, UI/UX design, graphic design, and short-form video editing.
-- Development skills: HTML, CSS, JavaScript, PHP, MySQL, Git, and GitHub.
+- Development and workflow skills: HTML, CSS, JavaScript, PHP, MySQL, Git, GitHub, and Vercel deployment.
 - Design and content tools: Figma, Photoshop, Premiere Pro, and CapCut.
 - JS VirtuAssist: a polished service website for a virtual-assistance business. Live at https://jsvirtuassist.vercel.app/#top
 - Carlito's Swimming Pool Resort: a responsive hospitality website that helps guests discover the venue and plan a visit. Live at https://carlitos-swimming-pool-resort.ct.ws/
