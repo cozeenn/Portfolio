@@ -193,4 +193,133 @@
     window.addEventListener('resize', resize);
     resize(); draw();
   }
+
+  // Groq-powered portfolio assistant
+  const chatLauncher = document.getElementById('chatLauncher');
+  const chatPanel = document.getElementById('chatPanel');
+  const chatClose = document.getElementById('chatClose');
+  const chatForm = document.getElementById('chatForm');
+  const chatInput = document.getElementById('chatInput');
+  const chatMessages = document.getElementById('chatMessages');
+  const chatSuggestions = document.getElementById('chatSuggestions');
+  const chatSend = chatForm?.querySelector('.chat-send');
+  const conversation = [];
+  let chatBusy = false;
+
+  const setChatOpen = (open) => {
+    if (!chatPanel || !chatLauncher) return;
+    chatPanel.classList.toggle('open', open);
+    chatLauncher.classList.toggle('hidden', open);
+    chatPanel.setAttribute('aria-hidden', String(!open));
+    chatLauncher.setAttribute('aria-expanded', String(open));
+    if (open) setTimeout(() => chatInput?.focus(), 180);
+  };
+
+  const messageTime = () => new Intl.DateTimeFormat('en', {
+    hour: '2-digit', minute: '2-digit', hour12: false
+  }).format(new Date());
+
+  const appendChatMessage = (role, content, state = '') => {
+    const message = document.createElement('div');
+    message.className = `chat-message ${role}${state ? ` ${state}` : ''}`;
+    const label = document.createElement('span');
+    label.className = 'message-label';
+    label.textContent = `${role === 'user' ? 'YOU' : 'REO AI'} / ${messageTime()}`;
+    const bubble = document.createElement('div');
+    bubble.className = 'message-bubble';
+    bubble.textContent = content;
+    message.append(label, bubble);
+    chatMessages.appendChild(message);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+    return message;
+  };
+
+  const appendTyping = () => {
+    const message = document.createElement('div');
+    message.className = 'chat-message assistant typing';
+    const label = document.createElement('span');
+    label.className = 'message-label';
+    label.textContent = 'REO AI / THINKING';
+    const bubble = document.createElement('div');
+    bubble.className = 'message-bubble typing-bubble';
+    bubble.setAttribute('aria-label', 'Reo AI is typing');
+    bubble.innerHTML = '<i></i><i></i><i></i>';
+    message.append(label, bubble);
+    chatMessages.appendChild(message);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+    return message;
+  };
+
+  const sendChatMessage = async (text) => {
+    const clean = text.trim();
+    if (!clean || chatBusy) return;
+    chatBusy = true;
+    chatSend.disabled = true;
+    chatInput.disabled = true;
+    appendChatMessage('user', clean);
+    conversation.push({ role: 'user', content: clean });
+    if (chatSuggestions) chatSuggestions.innerHTML = '';
+    chatInput.value = '';
+    chatInput.style.height = '';
+    const typing = appendTyping();
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 25000);
+
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: conversation.slice(-10) }),
+        signal: controller.signal
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(data.error || 'The assistant is unavailable right now.');
+      const answer = String(data.message || '').trim();
+      if (!answer) throw new Error('The assistant returned an empty response.');
+      typing.remove();
+      appendChatMessage('assistant', answer);
+      conversation.push({ role: 'assistant', content: answer });
+      if (conversation.length > 12) conversation.splice(0, conversation.length - 12);
+    } catch (error) {
+      typing.remove();
+      const message = error.name === 'AbortError'
+        ? 'That took too long. Please try again in a moment.'
+        : error.message;
+      appendChatMessage('assistant', message, 'error');
+      conversation.pop();
+    } finally {
+      clearTimeout(timeout);
+      chatBusy = false;
+      chatSend.disabled = false;
+      chatInput.disabled = false;
+      chatInput.focus();
+    }
+  };
+
+  chatLauncher?.addEventListener('click', () => setChatOpen(true));
+  chatClose?.addEventListener('click', () => setChatOpen(false));
+  chatForm?.addEventListener('submit', event => {
+    event.preventDefault();
+    sendChatMessage(chatInput.value);
+  });
+  chatInput?.addEventListener('keydown', event => {
+    if (event.key === 'Enter' && !event.shiftKey) {
+      event.preventDefault();
+      chatForm.requestSubmit();
+    }
+  });
+  chatInput?.addEventListener('input', () => {
+    chatInput.style.height = 'auto';
+    chatInput.style.height = `${Math.min(chatInput.scrollHeight, 96)}px`;
+  });
+  chatSuggestions?.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', () => sendChatMessage(button.textContent));
+  });
+  if (window.location.hash === '#assistant') setChatOpen(true);
+  window.addEventListener('hashchange', () => {
+    if (window.location.hash === '#assistant') setChatOpen(true);
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && chatPanel?.classList.contains('open')) setChatOpen(false);
+  });
 })();

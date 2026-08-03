@@ -20,6 +20,31 @@
     drop-shadow(0 12px 22px rgba(0, 0, 0, .35));
 }
 
+.chat-form textarea { min-width: 0; }
+
+body .chat-panel > * { min-width: 0; max-width: 100%; }
+body .chat-close {
+  position: absolute;
+  right: 16px;
+  top: 18px;
+  z-index: 3;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #353532;
+  background: #0d0d0d;
+  color: #aaa;
+  display: grid;
+  place-items: center;
+}
+body .chat-messages { overflow-x: hidden; }
+body .chat-message { max-width: calc(100% - 8px); }
+body .chat-form textarea { padding-right: 58px; }
+body .chat-send { position: absolute; right: 0; bottom: 0; }
+
+@media (max-width: 760px) {
+  body .chat-panel { max-width: 100vw; overflow: hidden; }
+}
+
 @media (max-width: 760px) {
   .loader { display: none; }
   body.loading { overflow-x: hidden; overflow-y: auto; }
