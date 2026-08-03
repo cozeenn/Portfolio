@@ -2,7 +2,7 @@
 .tech-stack:before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
 .stack-intro{display:flex;align-items:end;justify-content:space-between;gap:60px;margin-bottom:70px}
 .stack-intro h2{font:600 clamp(48px,6.2vw,100px)/.92 var(--display);letter-spacing:-.065em}
-.stack-intro h2 em{font:400 italic Georgia;color:var(--acid)}
+.stack-intro h2 em{font-family:Georgia,serif;font-style:italic;font-weight:400;color:var(--acid)}
 .stack-intro-copy{width:min(390px,100%);padding-left:24px;border-left:1px solid #353532}
 .stack-intro-copy>span{font-size:7px;letter-spacing:.14em;color:var(--violet)}
 .stack-intro-copy p{margin-top:15px;color:#898983;font-size:13px;line-height:1.85}
